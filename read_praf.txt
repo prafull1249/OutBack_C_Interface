@@ -1,0 +1,12 @@
+>> l
+0	SunSpec Common Model Block
+1	OutBack Gateway
+2	OutBack System Control
+3	Single Phase Inverter
+4	OutBack OPTICS Packet Statistics
+5	OutBack Radian Single Phase Inverter
+6	OutBack Radian Inverter Configuration
+7	OutBack FLEXnet-DC Battery Monitor
+8	OutBack FLEXnet-DC Battery Monitor Configuration
+9	SunSpec End Block
+

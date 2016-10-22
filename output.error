@@ -1,0 +1,27 @@
+pi@raspberrypi ~/Documents/new_code $ ./program -c 169.254.7.64 -i 4
+ret_val is � -1 all mode read mode Connect to: 169.254.7.64
+getSunSpecID() Addr 40001 ID 53756E53
+
+SunSpec Device Detected!
+Connected successfully to 169.254.7.64:502
+Block number: 3 
+Field number: 334 
+value:Not implemented
+Disconnected from 169.254.7.64
+
+"dc_power                   ":        Not im, 
+*** Error in `./program': double free or corruption (fasttop): 0x012aa038 ***
+read mode Aborted
+pi@raspberrypi ~/Documents/new_code $ ./program -c 169.254.7.64 -i 3
+ret_val is � -1 read mode Connect to: 169.254.7.64
+getSunSpecID() Addr 40001 ID 53756E53
+
+SunSpec Device Detected!
+Connected successfully to 169.254.7.64:502
+Block number: 3 
+Field number: 334 
+value:Not implemented
+Disconnected from 169.254.7.64
+*** Error in `./program': double free or corruption (fasttop): 0x019a2038 ***
+read mode Aborted
+pi@raspberrypi ~/Docum
