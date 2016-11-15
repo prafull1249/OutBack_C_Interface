@@ -2193,7 +2193,7 @@ int64 readSunSpecFormattedValue(int block, SunSpecField field, char buff[16])
 	int64	result;
 	uint16	sf;
 	char	units[8];
-	
+	//printf("reading value sunspec formatted \n");
 	//get value
 	switch (md[field].type)
 	{
@@ -2825,7 +2825,7 @@ uint64 getField(int block, SunSpecField field, char *buff)
 			if (ENUMERATED_U == md[field].units)
 			{
 				value = readSunSpecRegisterU16(block, field);
-                                //printf("value is %04x", value);
+                                printf("value is %04x", value);
 				
 				switch (field)
 				{

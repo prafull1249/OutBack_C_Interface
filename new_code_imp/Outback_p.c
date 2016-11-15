@@ -100,7 +100,7 @@ int GetParams(int argc, char *argv[]) {
         {"version",   optional_argument, 0,  'F' },
         {"block",   required_argument, 0,  'b' },
         {"value",   required_argument, 0,  'v' },
-		//added from Aurora abb
+	//added from Aurora abb
         { "JSON",	no_argument,    0,	'J' },
         { "input",    optional_argument,	0,	'i' },
         { "output",	optional_argument,	0,	'j' },
@@ -129,6 +129,7 @@ int GetParams(int argc, char *argv[]) {
 	  	    aflag = 1;
        		    ret_val = 'a';
                     break;
+
 
             case 'B':  //Verbose
 				bVerbose     = TRUE; break;
@@ -447,18 +448,26 @@ int outback_multiple_read(struct multiple_register registers[], int size){
 	{
 	
 		int addr;
-		for (j = 0; j < size; j++)
+		for (j = 0; j < size-1; j++)
 		{
 			i = getField(registers[j].block, registers[j].field, buff);
 			if (i == 484){
-				fprintf(outfp, "\n\"%-27s\": %13.6s, \n",registers[j].str, buff);
+				fprintf(outfp, "\n\"%s\": \"%s\", ",registers[j].str, buff);
 			}
 			else{ 
 	
-				fprintf(outfp, "\n\"%-27s\": %13.6s, \n",registers[j].str, buff);
+				fprintf(outfp, "\n\"%s\": \"%s\", ",registers[j].str, buff);
 				//return -1;
 			}	
 		}
+	// This duplication is to get rid of the comma at the end
+	i = getField(registers[j].block, registers[j].field, buff);
+		if (i == 484){
+			fprintf(outfp, "\n\"%s\": \"%s\" ",registers[j].str, buff);
+		}
+		else
+			fprintf(outfp, "\n\"%s\": \"%s\" ",registers[j].str, buff);
+
 	}
 	else
 	{
@@ -853,12 +862,11 @@ int print_field(int field_par, int block_par, char* print_str){
 		
 	int result = PerformOperation('r');
 	if (result == 0){
-		fprintf(outfp, "\n\"%-27s\": %13.6s, \n",print_str, buff);
-	}
-	else{ 
-		fprintf(outfp, "\n\"%-27s\": %13.6f, \n",print_str, ERROR);
-		return -1;
-	}
+               fprintf(outfp, "\n\"%-27s\": %13.6s, \n",print_str, buff);
+       }
+       else{ 
+               fprintf(outfp, "\n\"%-27s\": %13.6f, \n",print_str, ERROR);
+               return -1;
+       }
 }
-
 
