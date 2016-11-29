@@ -217,27 +217,28 @@ int GetParams(int argc, char *argv[]) {
 				 mflag = 1;
 				 ret_val = 'r';
                  break;
-		 
-			case 'v' :
-				//value when writing the register
-				 for (i = 0; i<BUFF_SIZE; i++)
-					value_write[i]=0;
+	 
+	    case 'v' :
+		//value when writing the register
+		 for (i = 0; i<BUFF_SIZE; i++)
+			value_write[i]=0;
 
-				 for (i = 0; i<BUFF_SIZE; i++){
-					if (optarg[i]== 0)
-					    break;
-					value_write[i] = optarg[i];
-				 }
+		 for (i = 0; i<BUFF_SIZE; i++){
+			if (optarg[i]== 0)
+			    break;
+			value_write[i] = optarg[i];
+		 }
 
- 				 vflag = 1;
-				 break;
-						 
-			case 'w' : //write register
-				mflag = 1;
-				wflag=1;
-				ret_val = 'w';
-				break;
-				 default: print_usage();
+		 vflag = 1;
+		 break;
+					 
+	   case 'w' : //write register
+		 mflag = 1;
+		 wflag=1;
+		 ret_val = 'w';
+		 break;
+	   
+	   default: print_usage();
                  return -1;
         }
     }
@@ -245,17 +246,17 @@ int GetParams(int argc, char *argv[]) {
      	   print_usage();
            return -1;
 	}
-	else if(mflag==1){
-		if(fflag==0 || bflag==0)
-		{
-			printf("2nd check\n");
-			print_usage();
-			return -1;
-		}
-		if ((wflag==1) && (vflag==0)){
-			print_usage();
-			return -1;
-		}
+    else if(mflag==1){
+    	if(fflag==0 || bflag==0)
+	{
+		//printf("2nd check\n");
+		print_usage();
+		return -1;
+	}
+	if ((wflag==1) && (vflag==0)){
+		print_usage();
+		return -1;
+	   }
 	}
 
     return ret_val;
@@ -267,7 +268,7 @@ int outback_read(){
 		{
 			//block = 0;
 			//field = 0;
-			
+		
 			if (pflag)
 				printf("Block number: %d \n", block);
 			//scanf("%d", &block);
@@ -293,7 +294,7 @@ int outback_read(){
 					{
 						int read_value = getField(block, i, buff);
 
-						printf("read_value is 0x%x\n", read_value);
+						//printf("read_value is 0x%x\n", read_value);
 						addr = Get_ModBus_Register_address(block, i);
 						printf("%d\t%d\t:\t%s\t%s\n", addr, i, fnames[i], buff);
 					}
@@ -309,7 +310,7 @@ int outback_read(){
 					{
 						//getField(block, field, buff);
 						int read_value = getField(block, field, buff);
-						printf("read_value is 0x%x buff %s\n", read_value,buff);
+						//printf("read_value is 0x%x buff %s\n", read_value,buff);
 
 					}
 				}
@@ -496,8 +497,9 @@ int outback_write(){
 	{
 		//block = 0;
 		//field = 0;
-
-		printf("Block number: ");
+		
+		if(pflag)
+			printf("Block number: %d",block);
 		//scanf("%d", &block);
 
 		if (block < 0 || block > devices)
@@ -506,7 +508,7 @@ int outback_write(){
 		}
 		else
 		{
-			printf("Field number (0 to list): ");
+			//printf("Field number (0 to list): ");
 			//scanf("%d", &field);
 
 			if (0 == field)
@@ -526,18 +528,18 @@ int outback_write(){
 				else
 				{
 					memset(buff, 0, sizeof(buff));
-					printf("New Value: %s\n", value_write);
+					//printf("New Value: %s\n", value_write);
 					//scanf("%s", buff);
 					for (i = 0; i<BUFF_SIZE;i++){
 					    buff[i] = value_write[i];
 					}
 					if (setFieldWithString(block, field, buff) >= 0)
 					{
-						printf("Write successful\n");
+						 printf("write : successful\n");
 					}
 					else
 					{
-						printf("Write failed\n");
+					 	 printf("write : failed\n");
 					}
 				}
 			}
@@ -581,21 +583,7 @@ int ConnectAXS(){
 			sprintf(address, DEF_SERV_IP_ADDR);
 			mb_port = MB_SERV_PORT;
 		}
-		/*
-		// mb_port is assigned from command line by -p option
-
-		if (NULL != (p_ptr = strchr(address,':')))		// look for ':' indicating non default modbus port
-		{
-			*p_ptr = 0;									// make ip address a separate string
-			++p_ptr;									// point to port
-			mb_port = atoi(p_ptr);
-
-			if ((mb_port <= 0) || (mb_port > 665535))	// ensure port number is valid
-			{
-				mb_port = MB_SERV_PORT;
-			}
-		}
-		*/
+		
 
 		devices = outbackInit(address, mb_port);
 
@@ -624,36 +612,12 @@ int CommCheck(int fdser, int yAddress)
 
 int main(int argc, char *argv[])
 {
-	/*
-	printf("OutBack Commnunications Shell\n\n");
-	printf("Version 3.0.105\n");
-	printf("Type command or 'h' for help\n");
-	*/
+	
 	char *COMMAND = NULL;
 	int result = 0;
 	
 	int mode = GetParams(argc, argv);
-	
-	//long unsigned int PID;
-	//int fLen = getPIDcmdLen(PID);
- 	//COMMAND = getMemPtr(fLen+1);
-        //getPIDcmd(PID,COMMAND);
-	/*
-	if (result == 0 && yGetDSP >= 0)
-		result |= GetDSP(mode, value);
-	if (result == 0 && bGetEnergy)
-		result |= GetCE(mode,value);
 
-	
-	if (result == 0 && yGetInput > 0)
-		result |= GetInputParam();
-	if (result == 0 && bGetVerFW == TRUE){
-		result |= GetVerFW();
-	}
-	
-	if (result == -1)
-		return result;
-	*/
 	if(mode != -1){
 		switch(mode){
 			case 'r':
@@ -663,16 +627,13 @@ int main(int argc, char *argv[])
 				print_field(field, block, "custome read");
 				break;
 			case 'w':
-				printf("write mode ");
+				//printf("write mode ");
 				result = outback_write();
 				break;
 			case 'a':
 				if(pflag)
-					printf("all mode ");
-				//result = PerformMultipleRead(INPUT);
-				//result = PerformMultipleRead(AC);
-				//result = PerformMultipleRead(GRID);
-				result = PerformMultipleRead(ALL_REG);
+		    		   printf("all mode ");
+				   result = PerformMultipleRead(ALL_REG);
 				
 				break;
 			default:
@@ -862,10 +823,11 @@ int print_field(int field_par, int block_par, char* print_str){
 		
 	int result = PerformOperation('r');
 	if (result == 0){
-               fprintf(outfp, "\n\"%-27s\": %13.6s, \n",print_str, buff);
+               fprintf(outfp, "\n\"%s\": %s, \n",print_str, buff);
        }
        else{ 
-               fprintf(outfp, "\n\"%-27s\": %13.6f, \n",print_str, ERROR);
+               //fprintf(outfp, "\n\"%s\": %s, \n",print_str, ERROR);
+               fprintf(outfp, "\n\"%s\": %s, \n",print_str, ERROR);
                return -1;
        }
 }
