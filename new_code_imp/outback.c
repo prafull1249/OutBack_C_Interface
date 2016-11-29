@@ -2197,8 +2197,10 @@ int64 readSunSpecFormattedValue(int block, SunSpecField field, char buff[16])
 	//get value
 	switch (md[field].type)
 	{
+		//printf("Prafull md field type a");
 		case ACC16_T:
 			result = readSunSpecRegisterU16(block, field);
+			//printf("Prafull md field type ACC16_T");
 			
 			if (NI_ACC16 == (result & 0xFFFF))
 			{
@@ -2208,6 +2210,7 @@ int64 readSunSpecFormattedValue(int block, SunSpecField field, char buff[16])
 			break;
 			
 		case INT16_T:
+			//printf("Prafull md field type INT16_T");
 			result = (int64) readSunSpecRegisterS16(block, field);
 			
 			if (NI_INT16 == (result & 0xFFFF))
@@ -2218,6 +2221,7 @@ int64 readSunSpecFormattedValue(int block, SunSpecField field, char buff[16])
 			break;
 			
 		case UINT16_T:
+			//printf("Prafull md field type UINT16_T");
 			result = readSunSpecRegisterU16(block, field);
 			
 			if ((NI_UINT16 == (result & 0xFFFF)) && (END_SunSpec_DID != field))
@@ -2229,6 +2233,7 @@ int64 readSunSpecFormattedValue(int block, SunSpecField field, char buff[16])
 			break;
 			
 		case ACC32_T:
+			//printf("Prafull md field type ACC32_T");
 			result = readSunSpecRegisterU32(block, field);
 			
 			if (NI_ACC32 == (result & 0xFFFFFFFF))
@@ -2239,6 +2244,7 @@ int64 readSunSpecFormattedValue(int block, SunSpecField field, char buff[16])
 			break;
 			
 		case INT32_T:
+			//printf("Prafull md field type INT32_T");
 			result = readSunSpecRegisterS32(block, field);
 			
 			if (NI_INT32 == (result & 0xFFFFFFFF))
@@ -2249,6 +2255,7 @@ int64 readSunSpecFormattedValue(int block, SunSpecField field, char buff[16])
 			break;
 			
 		case UINT32_T:
+			//printf("Prafull md field type UINT32_T");
 			result = readSunSpecRegisterU32(block, field);
 			
 			if (NI_UINT32 == (result & 0xFFFFFFFF))
@@ -2259,6 +2266,7 @@ int64 readSunSpecFormattedValue(int block, SunSpecField field, char buff[16])
 			break;
 			
 		case ACC64_T:
+			//printf("Prafull md field type ACC64_T");
 			result = readSunSpecRegisterU64(block, field);
 			
 			if (NI_ACC64 == result)
@@ -2269,6 +2277,7 @@ int64 readSunSpecFormattedValue(int block, SunSpecField field, char buff[16])
 			break;
 			
 		case INT64_T:
+			//printf("Prafull md field type INT64_T");
 			result = readSunSpecRegisterS64(block, field);
 			
 			if (NI_INT64 == result)
@@ -2279,6 +2288,7 @@ int64 readSunSpecFormattedValue(int block, SunSpecField field, char buff[16])
 			break;
 			
 		case UINT64_T:
+			//printf("Prafull md field type UINT64_T");
 			result = readSunSpecRegisterU64(block, field);
 			
 			if (NI_UINT64 == result)
@@ -2392,6 +2402,89 @@ int64 readSunSpecFormattedValue(int block, SunSpecField field, char buff[16])
 		case 0xfffd: // -3
 			if (result >= 0)
 			{
+				sprintf(buff, "%lld.%03lld", result / 1000, result % 1000);
+			}
+			else if ((result >= -999) && (result <= -1))
+			{
+				sprintf(buff, "-0.%03d", abs((int) result) % 1000);
+ 			}
+			else
+			{
+				sprintf(buff, "%lld.%03d", result / 1000, abs((int) result) % 1000);
+			}			
+			break;
+			
+		case 0xfffe: // -2
+			if (result >= 0)
+			{
+				sprintf(buff, "%lld.%02lld", result / 100, result % 100);
+			}
+			else if ((result >= -99) && (result <= -1))
+			{
+				sprintf(buff, "-0.%02d", abs((int) result) % 100);
+			}
+			else
+			{
+				sprintf(buff, "%lld.%02d", result / 100, abs((int) result) % 100);
+			}			
+			break;
+			
+		case 0xffff: // -1
+			if (result >= 0)
+			{
+				sprintf(buff, "%lld.%lld", result / 10, result % 10);
+			}
+			else if ((result >= -9) && (result <= -1))
+			{
+				sprintf(buff, "-0.%d", abs((int) result) % 10);
+			}
+			else
+			{
+				sprintf(buff, "%lld.%d", result / 10, abs((int) result) % 10);
+			}
+			break;
+			
+		case 0:
+			sprintf(buff, "%lld", result);
+			break;
+			
+		case 1:
+			sprintf(buff, "%lld", result * 10);
+			break;
+			
+		case 2:
+			sprintf(buff, "%lld", result * 100);
+			break;
+			
+		case 3:
+			sprintf(buff, "%lld", result * 1000);
+			break;
+			
+		case NI_SF:
+			if (BITFIELD_U == md[field].units)
+			{
+				if (UINT16_T == md[field].type)
+				     sprintf(buff, "0x%04llX", result);
+				else sprintf(buff, "0x%08llX", result);
+			}
+			else
+			{
+				sprintf(buff, "%lld", result);
+			}
+			
+			break;
+			
+		default:
+			sprintf(buff, "%lld", result);
+			break;
+	}
+
+	/*
+	switch (sf)
+	{
+		case 0xfffd: // -3
+			if (result >= 0)
+			{
 				sprintf(buff, "%lld.%03lld %s", result / 1000, result % 1000, units);
 			}
 			else if ((result >= -999) && (result <= -1))
@@ -2468,6 +2561,7 @@ int64 readSunSpecFormattedValue(int block, SunSpecField field, char buff[16])
 			sprintf(buff, "%lld", result);
 			break;
 	}
+	*/
 	
 	return result;
 }
@@ -2817,11 +2911,12 @@ SunSpecField lastField(int block)
 uint64 getField(int block, SunSpecField field, char *buff)
 {
 	uint64 value = 0;
-	
+	//printf("Prafull start getField\n");
 	switch (md[field].type)
 	{
 		case UINT16_T:
 		{	
+			//printf(" Prafull UINT16_T\n");
 			if (ENUMERATED_U == md[field].units)
 			{
 				value = readSunSpecRegisterU16(block, field);
@@ -2912,7 +3007,7 @@ uint64 getField(int block, SunSpecField field, char *buff)
 					{
 						if (NI_UINT16 == (value & 0xFFFF))
 						{
-							printf("2 Prafull\n");
+							//printf("2 Prafull\n");
 							sprintf(buff, "Not Implemented");
 						}
                         else if (0 == value)
@@ -3173,7 +3268,7 @@ uint64 getField(int block, SunSpecField field, char *buff)
 					{
 						if (NI_UINT16 == (value & 0xFFFF))
 						{
-							printf("3 Prafull\n");
+							//printf("3 Prafull\n");
 							sprintf(buff, "Not Implemented");
 						}
                         else if (3 <= value)
@@ -3311,7 +3406,7 @@ uint64 getField(int block, SunSpecField field, char *buff)
 					{
 						if (NI_UINT16 == (value & 0xFFFF))
 						{
-							printf("4 Prafull\n");
+							//printf("4 Prafull\n");
 							sprintf(buff, "Not Implemented");
 						}
 						else if ((0 == value) || (11 <= value) )
@@ -3375,7 +3470,7 @@ uint64 getField(int block, SunSpecField field, char *buff)
 						{
 							if (NI_UINT16 == (value & 0xFFFF))
 							{
-								printf("5 Prafull\n");
+								//printf("5 Prafull\n");
 								sprintf(buff, "Not Implemented");
 							}
 							else
@@ -3412,7 +3507,7 @@ uint64 getField(int block, SunSpecField field, char *buff)
 						if (NI_UINT16 == (value & 0xFFFF))
 						{
 					
-							printf("6 Prafull\n");
+							//printf("6 Prafull\n");
 							sprintf(buff, "Not Implemented");
 						}
 						else
@@ -3427,7 +3522,7 @@ uint64 getField(int block, SunSpecField field, char *buff)
 					{
 						if (NI_UINT16 == (value & 0xFFFF))
 						{
-							printf("7 Prafull\n");
+							//printf("7 Prafull\n");
 							sprintf(buff, "Not Implemented");
 						}
 						else
@@ -3451,7 +3546,7 @@ uint64 getField(int block, SunSpecField field, char *buff)
 					{
 						if (NI_UINT16 == (value & 0xFFFF))
 						{
-							printf("8 Prafull\n");
+							//printf("8 Prafull\n");
 							sprintf(buff, "Not Implemented");
 						}
 						else
@@ -3473,6 +3568,8 @@ uint64 getField(int block, SunSpecField field, char *buff)
 		
 		case INT16_T:
 		{	
+			
+			//printf(" Prafull INT16_T\n");
 			if (ENUMERATED_U == md[field].units)
 			{
 				value = readSunSpecRegisterU16(block, field);
@@ -3485,7 +3582,7 @@ uint64 getField(int block, SunSpecField field, char *buff)
 					{
 						if (NI_INT16 == (value & 0xFFFF))
 						{
-							printf("9 Prafull\n");
+							//printf("9 Prafull\n");
 							strcpy(buff, "Not Implemented");
 						}
 						else
@@ -3510,6 +3607,8 @@ uint64 getField(int block, SunSpecField field, char *buff)
 			
 		case UINT32_T:
 		{
+			
+			//printf(" Prafull UINT32_T\n");
 			if (ADDR_U == md[field].units)
 			{
 				value = readSunSpecAddress(block, field, buff);
@@ -3551,6 +3650,8 @@ uint64 getField(int block, SunSpecField field, char *buff)
 		}
 			
 		case STRING_T:
+
+		//printf(" Prafull STRING_T\n");
 		{
 			value = readSunSpecString(block, field, buff);
 			 //printf("value is %04x", value);
@@ -3559,6 +3660,8 @@ uint64 getField(int block, SunSpecField field, char *buff)
 			
 		default:
 		{
+
+			//printf(" Prafull Default\n");
 			value = readSunSpecFormattedValue(block, field, buff);
 			break;
 		}
