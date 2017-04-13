@@ -1,10 +1,7 @@
-.Outback_p.c.swo
-.Outback_p.c.swp
-.names.h.swp
-.registers.h.swp
+*.swp
 Shell
-new_code.tar
-newcode.zip
+*.tar
+*.zip
 outback
 program
 tags
