@@ -20,7 +20,7 @@ class InverterFactory(object):
         """
         with open("inverter.json", 'r') as f:
             inv_type_json = json.load(f)
-            logger.info("inverter type string " + str(inv_type_json))
+            logger.info("inverte r type string " + str(inv_type_json))
         if "type" not in inv_type_json:
             assert 0, "Problem with inverter_type file: inverter.json"
         type_inv = inv_type_json["type"]

@@ -4,6 +4,7 @@ __author__ = 'Prafull'
 import register_bank
 import blocks
 import inverter
+from outback_register import register
 from __utils__ import logger, json
 
 
@@ -67,6 +68,22 @@ class OutbackInverterClass(inverter.Inverter):
         :return:
         """
         reg = self.get_register(name)
+        if reg is not None:
+            value = reg.read_reg(self.ip)
+            if value is not None:
+                return value
+            logger.error("Read register {} failed".format(name))
+        else:
+            logger.error("Invalid Register {}".format(name))
+
+
+    def read_single(self, field, block):
+        """
+        Read register of Outback
+        :param name:
+        :return:
+        """
+        reg = register("custom_read", field, block)
         if reg is not None:
             value = reg.read_reg(self.ip)
             if value is not None:
@@ -352,3 +369,5 @@ class OutbackInverterClass(inverter.Inverter):
             "OutBack_Measured_System_Voltage"]
 
         return self.record_data(system_regs)
+
+    def read_single_reg(self, field, block):
