@@ -50,6 +50,13 @@ struct multiple_register {
 	char* str;
 };
 
+
+struct alt_multiple_register {
+	char* str;
+	int field;
+	int block;
+};
+
 struct multiple_register grid_register [] = {
 	
 	{GRID_POWER_FIELD,OUTBACK_RADIAN_SINGLE_PHASE_INVERTER, BATT_POWER_STR},
@@ -95,4 +102,27 @@ struct multiple_register reg_all[] = {
 };
 
 
+struct alt_multiple_register time_data[] = {
+	{"OutBack_Year",145, OUTBACK_BLOCK},
+	{"OutBack_Month",146, OUTBACK_BLOCK},
+	{"OutBack_Day",147, OUTBACK_BLOCK},
+	{"OutBack_Hour",148, OUTBACK_BLOCK},
+	{"OutBack_Minute",149, OUTBACK_BLOCK},
+	{"OutBack_Second",150, OUTBACK_BLOCK},
+};
+
+struct alt_multiple_register system_data[] = {
+	{"OutBack_Error",154, OUTBACK_BLOCK},
+	{"OutBack_Status",155, OUTBACK_BLOCK},
+	{"OutBack_System_Voltage",158, OUTBACK_BLOCK},
+	{"OutBack_Measured_System_Voltage",159, OUTBACK_BLOCK},
+};
+
+
+struct alt_multiple_register system_data[] = {
+	{"OutBack_Error",154, OUTBACK_BLOCK},
+	{"OutBack_Status",155, OUTBACK_BLOCK},
+	{"OutBack_System_Voltage",158, OUTBACK_BLOCK},
+	{"OutBack_Measured_System_Voltage",159, OUTBACK_BLOCK},
+};
 

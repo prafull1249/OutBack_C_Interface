@@ -26,6 +26,9 @@
 #define GRID  9
 #define ALL_REG  10
 
+#define TIME_DATA 11
+#define SYSTEM_DATA 12
+
 #define DC_VOLTAGE 	1
 #define DC_CURRENT	2
 #define DC_POWER  	3

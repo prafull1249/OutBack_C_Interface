@@ -10,6 +10,7 @@ INV_TYPES = {
     "outback": OutbackInverterClass.OutbackInverterClass,
 }
 
+
 class InverterFactory(object):
     # Create based on class name:
     @staticmethod

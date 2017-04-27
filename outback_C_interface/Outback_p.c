@@ -25,7 +25,7 @@
 #define DEF_SERV_IP_ADDR	"192.168.2.220"
 #define BUFF_SIZE	128
 
-int debug = 0;
+int debug = 0;-
 int devices	= 0;
 int connected = 0;
 int pflag = 0;
@@ -38,7 +38,7 @@ int	block;
 int	field;
 char value_write[BUFF_SIZE];
 int mb_port = MB_SERV_PORT;
-int mflag=0, cflag=0, fflag=0, bflag=0, aflag=0, wflag=0, vflag=0, ret_val=-1;
+int mflag=0, cflag=0, fflag=0, bflag=0, aflag=0, mul_flag = 0, wflag=0, vflag=0, ret_val=-1;
 int bGetVerFW=0, bVerbose=0, bGetEnergy=0, bGetMfg=0, bGetJoules=0, bJSON=0, yGetInput=0, yGetOutput=0, yGetGrid=0;
 
 FILE *outfp;
@@ -51,6 +51,19 @@ static char *outfile = NULL;
 /*--------------------------------------------------------------------------
     isNumeric
 ----------------------------------------------------------------------------*/
+
+int string_split(void) {
+  char st[] ="Where there is will, there is a way.";
+  char *ch;
+  ch = strtok(st, " ");
+  while (ch != NULL) {
+  printf("%s\n", ch);
+  ch = strtok(NULL, " ,");
+  }
+  getch();
+  return 0;
+}
+
 BOOL isNumeric(char *p)
 {
     int i;
@@ -94,6 +107,7 @@ int GetParams(int argc, char *argv[]) {
         {"write",      no_argument,       0,  'w' },
         {"read", no_argument,       0,  'r' },
         {"all", no_argument,       0,  'a' },
+		{"multiple", no_argument, 0, 'm'},
         {"ip",    required_argument, 0,  'c' },
         {"port",   required_argument, 0,  'p' },
         {"field",   required_argument, 0,  'f' },
@@ -105,7 +119,7 @@ int GetParams(int argc, char *argv[]) {
         { "input",    optional_argument,	0,	'i' },
         { "output",	optional_argument,	0,	'j' },
         { "grid",	optional_argument,	0,	'g' },
-	{ "serial-number",	no_argument,	0,	'n' },
+		{ "serial-number",	no_argument,	0,	'n' },
         { "output-file",	required_argument,   0,   'o' },
         { "firmware-ver",	no_argument,	0,	'f' },
         { "mfg-date",	no_argument,	0,	'm' },
@@ -122,14 +136,17 @@ int GetParams(int argc, char *argv[]) {
  	} else {
         	outfp = stdout;
  	}
-    while ((opt = getopt_long(argc, argv,"rwaFc:p:f:b:v:Jd:njo:fgli:",
+    while ((opt = getopt_long(argc, argv,"rmwaFc:p:f:b:v:Jd:njo:fgli:",
                    long_options, &long_index )) != -1) {
         switch (opt) {
 	    case 'a' :// read all
 	  	    aflag = 1;
        		    ret_val = 'a';
-                    break;
-
+                break;
+	    case 'm' :// read multiple
+	  	    mflag = 1;
+			ret_val = 'm';
+			break;
 
             case 'B':  //Verbose
 				bVerbose     = TRUE; break;
@@ -170,20 +187,20 @@ int GetParams(int argc, char *argv[]) {
                 if (optarg == NULL) {
                     yGetInput = DC_ALL;
                 } else {
-		   i = atoi(optarg);
+				i = atoi(optarg);
                    switch(i){
                    case 1:
-			   yGetInput = DC_VOLTAGE;
+					yGetInput = DC_VOLTAGE;
                            break;
                    case 2:
-        		   yGetInput = DC_CURRENT;
+        		    yGetInput = DC_CURRENT;
                            break;
                    case 3:
-         		   yGetInput = DC_POWER;
-                           break;
+         		    yGetInput = DC_POWER;
+                    break;
                    case 4:
-         		   yGetInput = DC_ALL;
-                           break;
+         		    yGetInput = DC_ALL;
+                    break;
 		   default:
                            printf("Enter proper argument for input parameters\n");
                            break;
