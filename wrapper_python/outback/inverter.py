@@ -53,3 +53,6 @@ class Inverter:
 
     def record_battery_data(self):
         pass
+
+    def read_single_reg(self, dict_fields):
+        pass

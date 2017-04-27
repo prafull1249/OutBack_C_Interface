@@ -47,9 +47,16 @@ class register:
             logger.error("fields and blocks are of different lengths")
             return None
 
-        result = subprocess.Popen(["outback", "-m", "-c", ip, "-f", fields, "-b", blocks]
-                                  , stdout=subprocess.PIPE)
-        out, err = result.communicate()
-        logger.info("Output " + out +  " error " + err)
-        #TODO check error handling to check if register write fails.
+        overall_out = ""
+        for i in range(len(fields_el)):
+            field = fields_el[i]
+            block = blocks_el[i]
+
+            result = subprocess.Popen(["outback", "-m", "-c", ip, "-f", field, "-b", block]
+                                      , stdout=subprocess.PIPE)
+            out, err = result.communicate()
+            logger.info("Output " + out + " error " + err)
+            overall_out = overall_out + out
+            #TODO check error handling to check if register write fails.
+
         return out

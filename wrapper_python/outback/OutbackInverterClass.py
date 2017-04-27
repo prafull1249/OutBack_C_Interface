@@ -76,19 +76,35 @@ class OutbackInverterClass(inverter.Inverter):
         else:
             logger.error("Invalid Register {}".format(name))
 
-
     def read_single(self, field, block):
         """
         Read register of Outback
         :param name:
         :return:
         """
-        reg = register("custom_read", field, block)
+        name = "custom_read"
+        reg = register(name, field, block)
         if reg is not None:
             value = reg.read_reg(self.ip)
             if value is not None:
                 return value
             logger.error("Read register {} failed".format(name))
+        else:
+            logger.error("Invalid Register {}".format(name))
+
+    def write_single(self, field, block, value):
+        """
+        Read register of Outback
+        :param name:
+        :return:
+        """
+        name = "custom_read"
+        reg = register(name, field, block)
+        if reg is not None:
+            value = reg.write_reg(value, self.ip)
+            if value is not None:
+                return value
+            logger.error("write register {} failed".format(name))
         else:
             logger.error("Invalid Register {}".format(name))
 
@@ -370,4 +386,39 @@ class OutbackInverterClass(inverter.Inverter):
 
         return self.record_data(system_regs)
 
-    def read_single_reg(self, field, block):
+    def read_single_reg(self, dict_fields):
+
+        if "field" in dict_fields:
+            field = dict_fields["field"]
+        else:
+            logger.error("invalid register fields")
+            return -1
+        if "block" in dict_fields:
+            block= dict_fields["block"]
+        else:
+            logger.error("invalid register fields")
+            return -1
+
+        return self.read_single(field, block)
+
+
+    def write_single_reg(self, dict_fields):
+
+        if "field" in dict_fields:
+            field = dict_fields["field"]
+        else:
+            logger.error("invalid register fields")
+            return -1
+        if "block" in dict_fields:
+            block= dict_fields["block"]
+        else:
+            logger.error("invalid register fields")
+            return -1
+
+        if "value" in dict_fields:
+            value = dict_fields["value"]
+        else:
+            logger.error("invalid register fields")
+            return -1
+
+        return self.write_single(field, block, value)
