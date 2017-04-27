@@ -118,11 +118,11 @@ struct alt_multiple_register system_data[] = {
 	{"OutBack_Measured_System_Voltage",159, OUTBACK_BLOCK},
 };
 
-
+/*
 struct alt_multiple_register system_data[] = {
 	{"OutBack_Error",154, OUTBACK_BLOCK},
 	{"OutBack_Status",155, OUTBACK_BLOCK},
 	{"OutBack_System_Voltage",158, OUTBACK_BLOCK},
 	{"OutBack_Measured_System_Voltage",159, OUTBACK_BLOCK},
 };
-
+*/

@@ -76,6 +76,23 @@ class OutbackInverterClass(inverter.Inverter):
         else:
             logger.error("Invalid Register {}".format(name))
 
+    def read_multiple(self, reg_names):
+        """
+        Read multiple register of Outback
+        :param name:
+        :return:
+        """
+	fields = []
+	blocks = []
+	for name in reg_names:
+	        reg = self.get_register(name)
+		if reg is not None:
+	       	 	fields.append(reg.field)
+			blocks.append(reg.block)
+		else:
+			logger.error(name + " not present")
+	return register.read_multiple_reg(self.ip, fields, blocks)
+
     def read_single(self, field, block):
         """
         Read register of Outback

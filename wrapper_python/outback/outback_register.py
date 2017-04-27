@@ -15,47 +15,45 @@ class register:
         self.unit = unit
 
     def read_reg(self, ip, port=""):
-        result = subprocess.Popen(["outback", "-r", "-c", ip, "-f", self.field, "-b", self.block]
-                                  , stdout=subprocess.PIPE)
+        result = subprocess.Popen(["./program", "-r", "-c", str(ip), "-f", str(self.field), "-b", str(self.block)],stdout=subprocess.PIPE)
         out, err = result.communicate()
-        logger.info("Output " + out +  " error " + err)
+        logger.info("Output " + str(out) +  " error " + str(err))
         #TODO check error handling to check if register read fails.
         return out
 
     def write_reg(self, value, ip, port=""):
-        result = subprocess.Popen(["outback", "-w", "-c", ip, "-f", self.field, "-b", self.block, "-v", value]
-                                  , stdout=subprocess.PIPE)
+        result = subprocess.Popen(["./program", "-w", "-c", str(ip), "-f", str(self.field), "-b", str(self.block), "-v", str(value)], stdout=subprocess.PIPE)
         out, err = result.communicate()
-        logger.info("Output " + out +  " error " + err)
+        logger.info("Output " + str(out) +  " error " + str(err))
         #TODO check error handling to check if register write fails.
         return out
 
     @staticmethod
-    def read_multiple_reg(self, ip, fields, blocks):
+    def read_multiple_reg( ip, fields, blocks):
         """
         Reads multiple registers.
         :param fields: a comma separated string of register field values
         :param blocks: a comma separated string of register block values
         :return:
         """
-        fields_el = fields.split(',')
-        blocks_el = blocks.split(',')
+        fields_el = fields
+        blocks_el = blocks
 
-        if fields_el != blocks_el:
-            logger.debug("{} fields".format(fields))
-            logger.debug("{} blocks".format(blocks))
+        if len(fields_el) != len(blocks_el):
+            logger.debug("{} fields".format(str(fields)))
+            logger.debug("{} blocks".format(str(blocks)))
             logger.error("fields and blocks are of different lengths")
             return None
 
         overall_out = ""
-        for i in range(len(fields_el)):
+        out = None
+	for i in range(len(fields_el)):
             field = fields_el[i]
             block = blocks_el[i]
 
-            result = subprocess.Popen(["outback", "-m", "-c", ip, "-f", field, "-b", block]
-                                      , stdout=subprocess.PIPE)
+            result = subprocess.Popen(["./program", "-r", "-c",str(ip), "-f", str(field), "-b", str(block)], stdout=subprocess.PIPE)
             out, err = result.communicate()
-            logger.info("Output " + out + " error " + err)
+            logger.info("Output " + str(out) + " error " + str(err))
             overall_out = overall_out + out
             #TODO check error handling to check if register write fails.
 

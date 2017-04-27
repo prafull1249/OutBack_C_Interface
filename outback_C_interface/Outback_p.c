@@ -25,7 +25,7 @@
 #define DEF_SERV_IP_ADDR	"192.168.2.220"
 #define BUFF_SIZE	128
 
-int debug = 0;-
+int debug = 0;
 int devices	= 0;
 int connected = 0;
 int pflag = 0;
@@ -60,7 +60,7 @@ int string_split(void) {
   printf("%s\n", ch);
   ch = strtok(NULL, " ,");
   }
-  getch();
+  //getch();
   return 0;
 }
 

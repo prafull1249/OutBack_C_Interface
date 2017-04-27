@@ -1,0 +1,687 @@
+SunSpec Device Detected!
+Connected successfully to 169.254.7.64:502
+>> l
+0	SunSpec Common Model Block
+1	OutBack Gateway
+2	OutBack System Control
+3	Single Phase Inverter
+4	OutBack OPTICS Packet Statistics
+5	OutBack Radian Single Phase Inverter
+6	OutBack Radian Inverter Configuration
+7	Basic Charge Controller
+8	OutBack FM Charge Controller
+9	OutBack FLEXnet-DC Battery Monitor
+10	OutBack FLEXnet-DC Battery Monitor Configuration
+11	SunSpec End Block
+>> a
+
+*** SunSpec Common Model Block ***
+40000	0	:	C_SunSpec_ID    	1850954613  
+40002	1	:	C_SunSpec_DID   	1  
+40003	2	:	C_SunSpec_Length	65  
+value is 000040004	3	:	C_Manufacturer  	OutBack_Power
+value is 000040020	4	:	C_Model         	MATE3
+value is 000040036	5	:	C_Options       	
+value is 000040044	6	:	C_Version       	003.011.000
+value is 000040052	7	:	C_SerialNumber  	M313302
+40068	8	:	C_DeviceAddress 	0  
+
+*** OutBack OutBack Block ***
+40069	9	:	OutBack_SunSpec_DID                                  	64110  
+40070	10	:	OutBack_SunSpec_Length                               	420  
+40071	11	:	OutBack_Major_Firmware_Number                        	3  
+40072	12	:	OutBack_Mid_Firmware_Number                          	11  
+40073	13	:	OutBack_Minor_Firmware_Number                        	0  
+40074	14	:	OutBack_Encryption_Key                               	0  
+value is 410040075	15	:	OutBack_MAC_Address                                  	001234-56789A
+value is 000040082	16	:	OutBack_Write_Password                               	
+value is 000040090	17	:	OutBack_Enable_DHCP                                  	Disabled
+value is 7ee1422840091	18	:	OutBack_TCPIP_Address                                	169.254.7.64
+value is 7ee1422840093	19	:	OutBack_TCPIP_Gateway                                	169.254.7.1
+value is 7ee1422840095	20	:	OutBack_TCPIP_Netmask                                	255.255.0.0
+value is 7ee1422840097	21	:	OutBack_TCPIP_DNS_1                                  	169.254.7.2
+value is 7ee1422840099	22	:	OutBack_TCPIP_DNS_2                                  	192.168.0.3
+40101	23	:	OutBack_Modbus_Port                                  	502  
+value is 000040102	24	:	OutBack_SMTP_Server_Name                             	
+value is 000040122	25	:	OutBack_SMTP_Account_Name                            	
+value is 000040138	26	:	OutBack_SMTP_SSL_Enable                              	0
+value is 000040139	27	:	OutBack_SMTP_Email_Password                          	
+value is 000040147	28	:	OutBack_SMTP_Email_User_Name                         	
+40167	29	:	OutBack_Status_Email_Interval                        	0  
+40168	30	:	OutBack_Status_Email_Status_Time                     	0  
+value is 000040169	31	:	OutBack_Status_Email_Subject_Line                    	
+value is 000040194	32	:	OutBack_Status_Email_To_Address_1                    	
+value is 000040214	33	:	OutBack_Status_Email_To_Address_2                    	
+40234	34	:	OutBack_Alarm_Email_Enable                           	0  
+value is 000040235	35	:	OutBack_Alarm_Email_Subject_Line                     	
+value is 000040260	36	:	OutBack_Alarm_Email_To_Address_1                     	
+value is 000040280	37	:	OutBack_Alarm_Email_To_Address_2                     	
+value is 000040300	38	:	OutBack_FTP_Password                                 	
+value is 000040308	39	:	OutBack_Telnet_Password                              	
+value is 000040316	40	:	OutBack_SD_Card_Log_Write_Interval                   	5 secs
+40317	41	:	OutBack_SD_Card_Log_Retain_Days                      	0  
+value is 000040318	42	:	OutBack_SD_Card_Logging_Mode                         	Disabled
+value is 000040319	43	:	OutBack_Time_Server_Name                             	pool.ntp.org
+value is 000040339	44	:	OutBack_Enable_Time_Server                           	Enabled
+40340	45	:	OutBack_Set_Time_Zone                                	-8  
+value is 000040341	46	:	OutBack_Enable_Float_Coordination                    	Enabled
+value is 000040342	47	:	OutBack_Enable_FNDC_Charge_Termination               	Enabled
+value is 000040343	48	:	OutBack_Enable_FNDC_Grid_Tie_Control                 	Disabled
+40344	49	:	OutBack_Voltage_SF                                   	-1  
+40345	50	:	OutBack_Hour_SF                                      	-1  
+value is 000040346	51	:	OutBack_AGS_Mode                                     	Enabled
+40347	52	:	OutBack_AGS_Port                                     	1  
+value is 000040348	53	:	OutBack_AGS_Port_Type                                	AUX Output
+value is 000040349	54	:	OutBack_Generator_Type                               	AC Gen
+40350	55	:	OutBack_AGS_DC_Gen_Absorb_Voltage                    	56.0 V
+40351	56	:	OutBack_AGS_DC_Gen_Absorb_Time                       	1.0 hours
+40352	57	:	OutBack_AGS_Fault_Time                               	17 mins
+40353	58	:	OutBack_AGS_Gen_Cool_Down_Time                       	5 mins
+40354	59	:	OutBack_AGS_Gen_Warm_Up_Time                         	5 mins
+value is 000040355	60	:	OutBack_Generator_Exercise_Mode                      	Disabled
+40356	61	:	OutBack_Exercise_Start_Hour                          	16 hours
+40357	62	:	OutBack_Exercise_Start_Minute                        	0 mins
+value is 000040358	63	:	OutBack_Exercise_Day                                 	Sun
+40359	64	:	OutBack_Exercise_Period                              	15 mins
+40360	65	:	OutBack_Exercise_Interval                            	1  
+value is 000040361	66	:	OutBack_AGS_Sell_Mode                                	Enabled
+value is 000040362	67	:	OutBack_AGS_2_Min_Start_Mode                         	Enabled
+40363	68	:	OutBack_AGS_2_Min_Start_Voltage                      	46.8 V
+value is 000040364	69	:	OutBack_AGS_2_Hour_Start_Mode                        	Enabled
+40365	70	:	OutBack_AGS_2_Hour_Start_Voltage                     	47.6 V
+value is 000040366	71	:	OutBack_AGS_24_Hour_Start_Mode                       	Enabled
+40367	72	:	OutBack_AGS_24_Hour_Start_Voltage                    	48.0 V
+value is 000040368	73	:	OutBack_AGS_Load_Start_Mode                          	Disabled
+40369	74	:	OutBack_AGS_Load_Start_kW                            	1 kW
+40370	75	:	OutBack_AGS_Load_Start_Delay                         	1 mins
+40371	76	:	OutBack_AGS_Load_Stop_kW                             	1 kW
+40372	77	:	OutBack_AGS_Load_Stop_Delay                          	1 mins
+value is 000040373	78	:	OutBack_AGS_SOC_Start_Mode                           	Disabled
+40374	79	:	OutBack_AGS_SOC_Start_Percentage                     	60 %
+40375	80	:	OutBack_AGS_SOC_Stop_Percentage                      	95 %
+value is 000040376	81	:	OutBack_AGS_Enable_Full_Charge_Mode                  	Disabled
+40377	82	:	OutBack_AGS_Full_Charge_Interval                     	14 days
+value is 000040378	83	:	OutBack_AGS_Must_Run_Mode                            	Disabled
+40379	84	:	OutBack_AGS_Must_Run_Weekday_Start_Hour              	0 hours
+40380	85	:	OutBack_AGS_Must_Run_Weekday_Start_Minute            	0 mins
+40381	86	:	OutBack_AGS_Must_Run_Weekday_Stop_Hour               	0 hours
+40382	87	:	OutBack_AGS_Must_Run_Weekday_Stop_Minute             	0 mins
+40383	88	:	OutBack_AGS_Must_Run_Weekend_Start_Hour              	0 hours
+40384	89	:	OutBack_AGS_Must_Run_Weekend_Start_Minute            	0 mins
+40385	90	:	OutBack_AGS_Must_Run_Weekend_Stop_Hour               	0 hours
+40386	91	:	OutBack_AGS_Must_Run_Weekend_Stop_Minute             	0 mins
+value is 000040387	92	:	OutBack_AGS_Quiet_Time_Mode                          	Disabled
+40388	93	:	OutBack_AGS_Quiet_Time_Weekday_Start_Hour            	0 hours
+40389	94	:	OutBack_AGS_Quiet_Time_Weekday_Start_Minute          	0 mins
+40390	95	:	OutBack_AGS_Quiet_Time_Weekday_Stop_Hour             	0 hours
+40391	96	:	OutBack_AGS_Quiet_Time_Weekday_Stop_Minute           	0 mins
+40392	97	:	OutBack_AGS_Quiet_Time_Weekend_Start_Hour            	0 hours
+40393	98	:	OutBack_AGS_Quiet_Time_Weekend_Start_Minute          	0 mins
+40394	99	:	OutBack_AGS_Quiet_Time_Weekend_Stop_Hour             	0 hours
+40395	100	:	OutBack_AGS_Quiet_Time_Weekend_Stop_Minute           	0 mins
+40396	101	:	OutBack_AGS_Total_Generator_Run_Time                 	18091 mins
+value is 000040398	102	:	OutBack_HBX_Mode                                     	Disabled
+40399	103	:	OutBack_HBX_Grid_Connect_Voltage                     	48.0 V
+40400	104	:	OutBack_HBX_Grid_Connect_Delay                       	1.0 hours
+40401	105	:	OutBack_HBX_Grid_Disconnect_Voltage                  	52.0 V
+40402	106	:	OutBack_HBX_Grid_Disconnect_Delay                    	1.0 hours
+40403	107	:	OutBack_HBX_Grid_Connect_SOC                         	60 %
+40404	108	:	OutBack_HBX_Grid_Disconnect_SOC                      	95 %
+value is 000040405	109	:	OutBack_Grid_Use_Interval_1_Mode                     	Disabled
+40406	110	:	OutBack_Grid_Use_Interval_1_Weekday_Start_Hour       	0 hours
+40407	111	:	OutBack_Grid_Use_Interval_1_Weekday_Start_Minute     	0 mins
+40408	112	:	OutBack_Grid_Use_Interval_1_Weekday_Stop_Hour        	0 hours
+40409	113	:	OutBack_Grid_Use_Interval_1_Weekday_Stop_Minute      	0 mins
+40410	114	:	OutBack_Grid_Use_Interval_1_Weekend_Start_Hour       	0 hours
+40411	115	:	OutBack_Grid_Use_Interval_1_Weekend_Start_Minute     	0 mins
+40412	116	:	OutBack_Grid_Use_Interval_1_Weekend_Stop_Hour        	0 hours
+40413	117	:	OutBack_Grid_Use_Interval_1_Weekend_Stop_Minute      	0 mins
+value is 000040414	118	:	OutBack_Grid_Use_Interval_2_Mode                     	Disabled
+40415	119	:	OutBack_Grid_Use_Interval_2_Weekday_Start_Hour       	0 hours
+40416	120	:	OutBack_Grid_Use_Interval_2_Weekday_Start_Minute     	0 mins
+40417	121	:	OutBack_Grid_Use_Interval_2_Weekday_Stop_Hour        	0 hours
+40418	122	:	OutBack_Grid_Use_Interval_2_Weekday_Stop_Minute      	0 mins
+value is 000040419	123	:	OutBack_Grid_Use_Interval_3_Mode                     	Disabled
+40420	124	:	OutBack_Grid_Use_Interval_3_Weekday_Start_Hour       	0 hours
+40421	125	:	OutBack_Grid_Use_Interval_3_Weekday_Start_Minute     	0 mins
+40422	126	:	OutBack_Grid_Use_Interval_3_Weekday_Stop_Hour        	0 hours
+40423	127	:	OutBack_Grid_Use_Interval_3_Weekday_Stop_Minute      	0 mins
+value is 000040424	128	:	OutBack_Load_Grid_Transfer_Mode                      	Disabled
+40425	129	:	OutBack_Load_Grid_Transfer_Threshold                 	0.1 kW
+40426	130	:	OutBack_Load_Grid_Transfer_Connect_Delay             	5 secs
+40427	131	:	OutBack_Load_Grid_Transfer_Disconnect_Delay          	10 secs
+40428	132	:	OutBack_Load_Grid_Transfer_Connect_Battery_Voltage   	48.0 V
+40429	133	:	OutBack_Load_Grid_Transfer_Re_Connect_Battery_Voltage	57.6 V
+value is 000040430	134	:	OutBack_Global_Charger_Control_Mode                  	Disabled
+40431	135	:	OutBack_Global_Charger_Output_Limit                  	80 A
+value is 000040432	136	:	OutBack_Radian_AC_Coupled_Mode                       	Disabled
+40433	137	:	OutBack_Radian_AC_Coupled_AUX_Port                   	1  
+40434	138	:	OutBack_URL_Lock                                     	Not implemented
+value is 000040436	139	:	OutBack_Web_Reporting_Base_URL                       	
+value is 000040456	140	:	OutBack_Web_User_Logged_In_Status                    	0
+value is 000040457	141	:	OutBack_HUB_Type                                     	HUB10.3
+40458	142	:	OutBack_HUB_Major_Firmware_Number                    	3  
+40459	143	:	OutBack_HUB_Mid_Firmware_Number                      	3  
+40460	144	:	OutBack_HUB_Minor_Firmware_Number                    	0  
+40461	145	:	OutBack_Year                                         	2017  
+40462	146	:	OutBack_Month                                        	5  
+40463	147	:	OutBack_Day                                          	26  
+40464	148	:	OutBack_Hour                                         	6  
+40465	149	:	OutBack_Minute                                       	35  
+40466	150	:	OutBack_Second                                       	48  
+40467	151	:	OutBack_Temp_Batt                                    	Not implemented
+40468	152	:	OutBack_Temp_Ambient                                 	Not implemented
+40469	153	:	OutBack_Temp_SF                                      	0  
+40470	154	:	OutBack_Error                                        	0x0000 b
+40471	155	:	OutBack_Status                                       	0x0000 b
+40472	156	:	OutBack_Update_Device_Firmware_Port                  	255  
+value is 000040473	157	:	OutBack_Gateway_Type                                 	MATE3
+40474	158	:	OutBack_System_Voltage                               	48 V
+40475	159	:	OutBack_Measured_System_Voltage                      	48.7 V
+40476	160	:	OutBack_AGS_AC_Reconnect_Delay                       	3 mins
+value is 000040477	161	:	OutBack_Multi_Phase_Coordination                     	0
+value is ff0040478	162	:	OutBack_Sched_1_AC_Mode                              	---------
+40479	163	:	OutBack_Sched_1_AC_Mode_Hour                         	0 hours
+40480	164	:	OutBack_Sched_1_AC_Mode_Min                          	0 mins
+value is ff0040481	165	:	OutBack_Sched_2_AC_Mode                              	---------
+40482	166	:	OutBack_Sched_2_AC_Mode_Hour                         	0 hours
+40483	167	:	OutBack_Sched_2_AC_Mode_Min                          	0 mins
+value is ff0040484	168	:	OutBack_Sched_3_AC_Mode                              	---------
+40485	169	:	OutBack_Sched_3_AC_Mode_Hour                         	0 hours
+40486	170	:	OutBack_Sched_3_AC_Mode_Min                          	0 mins
+40487	171	:	OutBack_Auto_reboot                                  	0  
+40488	172	:	OutBack_Spare_Reg_2                                  	0  
+40489	173	:	OutBack_Spare_Reg_3                                  	0  
+40490	174	:	OutBack_Spare_Reg_4                                  	0  
+
+*** OutBack System Control ***
+40491	175	:	OB_SunSpec_DID                           	64120  
+40492	176	:	OB_SunSpec_Length                        	27  
+40493	177	:	OB_DC_Voltage_SF                         	-1  
+40494	178	:	OB_AC_Current_SF                         	-1  
+40495	179	:	OB_Time_SF                               	-1  
+40496	180	:	OB_Bulk_Charge_Enable_Disable            	0  
+40497	181	:	OB_Inverter_AC_Drop_Use                  	0  
+40498	182	:	OB_Set_Inverter_Mode                     	0  
+40499	183	:	OB_Grid_Tie_Mode                         	0  
+40500	184	:	OB_Set_Inverter_Charger_Mode             	0  
+40501	185	:	OB_Control_Status                        	584  
+40502	186	:	OB_Set_Sell_Voltage                      	44.0 V
+40503	187	:	OB_Set_Radian_Inverter_Sell_Current_Limit	24.0 A
+40504	188	:	OB_Set_Absorb_Voltage                    	57.6 V
+40505	189	:	OB_Set_Absorb_Time                       	1.0 hours
+40506	190	:	OB_Set_Float_Voltage                     	54.4 V
+40507	191	:	OB_Set_Float_Time                        	1.0 hours
+40508	192	:	OB_Set_Inverter_Charger_Current_Limit    	16.0 A
+40509	193	:	OB_Set_Inverter_AC1_Current_Limit        	60.0 A
+40510	194	:	OB_Set_Inverter_AC2_Current_Limit        	43.0 A
+value is 000040511	195	:	OB_Set_AGS_OP_Mode                       	Auto
+value is 000040512	196	:	OB_AGS_Operational_State                 	Stopped
+40513	197	:	OB_AGS_Operational_State_Timer           	0 secs
+40514	198	:	OB_Gen_Last_Run_Start_Time_GMT           	Tue, 04 Apr 2017 10:35:59
+40516	199	:	OB_Gen_Last_Run_Duration                 	778 secs
+40518	200	:	OB_Set_AC_Output_Freq_Offline_Mode       	0  
+40519	201	:	OB_Set_AC_Output_Offline_Freq            	0.0  
+
+*** Single Phase Inverter ***
+40520	304	:	I_SunSpec_DID    	101  
+40521	305	:	I_SunSpec_Length 	50  
+40522	306	:	I_AC_Current     	0 A
+40523	307	:	I_AC_CurrentA    	0 A
+40524	308	:	I_AC_CurrentB    	Not implemented
+40525	309	:	I_AC_CurrentC    	Not implemented
+40526	310	:	I_AC_Current_SF  	0  
+40527	311	:	I_AC_VoltageAB   	Not implemented
+40528	312	:	I_AC_VoltageBC   	Not implemented
+40529	313	:	I_AC_VoltageCA   	Not implemented
+40530	314	:	I_AC_VoltageAN   	0 V
+40531	315	:	I_AC_VoltageBN   	Not implemented
+40532	316	:	I_AC_VoltageCN   	Not implemented
+40533	317	:	I_AC_Voltage_SF  	0  
+40534	318	:	I_AC_Power       	0.00 kW
+40535	319	:	I_AC_Power_SF    	-2  
+40536	320	:	I_AC_Frequency   	0.0 Hz
+40537	321	:	I_AC_Frequency_SF	-1  
+40538	322	:	I_AC_VA          	0.00 kW
+40539	323	:	I_AC_VA_SF       	-2  
+40540	324	:	I_AC_VAR         	0.00 kW
+40541	325	:	I_AC_VAR_SF      	-2  
+40542	326	:	I_AC_PF          	0.00 %
+40543	327	:	I_AC_PF_SF       	-2  
+40544	328	:	I_AC_Energy_WH   	Not implemented
+40546	329	:	I_AC_Energy_WH_SF	0  
+40547	330	:	I_DC_Current     	Not implemented
+40548	331	:	I_DC_Current_SF  	0  
+40549	332	:	I_DC_Voltage     	48.4 V
+40550	333	:	I_DC_Voltage_SF  	-1  
+40551	334	:	I_DC_Power       	Not implemented
+40552	335	:	I_DC_Power_SF    	-1  
+40553	336	:	I_Temp_Cab       	Not implemented
+40554	337	:	I_Temp_Sink      	21 deg C
+40555	338	:	I_Temp_Trans     	21 deg C
+40556	339	:	I_Temp_Other     	21 deg C
+40557	340	:	I_Temp_SF        	0  
+value is 000040558	341	:	I_Status         	Fault
+40559	342	:	I_Status_Vendor  	0x0000 b
+40560	343	:	I_Event_1        	0x00400000 b
+40562	344	:	I_Event_2        	0x00000000 b
+40564	345	:	I_Event_1_Vendor 	0x00000000 b
+40567	346	:	I_Event_2_Vendor 	Not implemented
+40569	347	:	I_Event_3_Vendor 	Not implemented
+40571	348	:	I_Event_4_Vendor 	0xFAFFFFFF b
+
+*** OutBack OPTICS Packet Statistics ***
+40572	741	:	OP_stats_DID              	64255  
+40573	742	:	OP_stats_Length           	56  
+40574	743	:	OP_stats_Bt_min           	0  
+40575	744	:	OP_stats_Bt_max           	0  
+40576	745	:	OP_stats_Bt_ave           	0  
+40577	746	:	OP_stats_Bt_attempts      	10  
+40578	747	:	OP_stats_Bt_errors        	9  
+40579	748	:	OP_stats_Bt_timeouts      	9  
+40580	749	:	OP_stats_Bt_packet_timeout	35  
+40581	750	:	OP_stats_Mp_min           	0  
+40582	751	:	OP_stats_Mp_max           	0  
+40583	752	:	OP_stats_Mp_ave           	0  
+40584	753	:	OP_stats_Mp_attempts      	0  
+40585	754	:	OP_stats_Mp_errors        	0  
+40586	755	:	OP_stats_Mp_timeouts      	0  
+40587	756	:	OP_stats_Mp_packet_timeout	15  
+40588	757	:	OP_stats_Cu_min           	0  
+40589	758	:	OP_stats_Cu_max           	0  
+40590	759	:	OP_stats_Cu_ave           	0  
+40591	760	:	OP_stats_Cu_attempts      	2  
+40592	761	:	OP_stats_Cu_errors        	0  
+40593	762	:	OP_stats_Cu_timeouts      	0  
+40594	763	:	OP_stats_Cu_packet_timeout	15  
+40595	764	:	OP_stats_Su_min           	0  
+40596	765	:	OP_stats_Su_max           	0  
+40597	766	:	OP_stats_Su_ave           	0  
+40598	767	:	OP_stats_Su_attempts      	1  
+40599	768	:	OP_stats_Su_errors        	1  
+40600	769	:	OP_stats_Su_timeouts      	0  
+40601	770	:	OP_stats_Su_packet_timeout	20  
+40602	771	:	OP_stats_Pg_min           	0  
+40603	772	:	OP_stats_Pg_max           	0  
+40604	773	:	OP_stats_Pg_ave           	0  
+40605	774	:	OP_stats_Pg_attempts      	0  
+40606	775	:	OP_stats_Pg_errors        	0  
+40607	776	:	OP_stats_Pg_timeouts      	0  
+40608	777	:	OP_stats_Pg_packet_timeout	15  
+40609	778	:	OP_stats_Mb_min           	0  
+40610	779	:	OP_stats_Mb_max           	0  
+40611	780	:	OP_stats_Mb_ave           	0  
+40612	781	:	OP_stats_Mb_attempts      	0  
+40613	782	:	OP_stats_Mb_errors        	0  
+40614	783	:	OP_stats_Mb_timeouts      	0  
+40615	784	:	OP_stats_Mb_packet_timeout	15  
+40616	785	:	OP_stats_Fu_min           	0  
+40617	786	:	OP_stats_Fu_max           	0  
+40618	787	:	OP_stats_Fu_ave           	0  
+40619	788	:	OP_stats_Fu_attempts      	0  
+40620	789	:	OP_stats_Fu_errors        	0  
+40621	790	:	OP_stats_Fu_timeouts      	0  
+40622	791	:	OP_stats_Fu_packet_timeout	15  
+40623	792	:	OP_stats_Ev_min           	0  
+40624	793	:	OP_stats_Ev_max           	0  
+40625	794	:	OP_stats_Ev_ave           	0  
+40626	795	:	OP_stats_Ev_attempts      	0  
+40627	796	:	OP_stats_Ev_errors        	0  
+40628	797	:	OP_stats_Ev_timeouts      	0  
+40629	798	:	OP_stats_Ev_packet_timeout	15  
+
+*** OutBack Radian Single Phase Inverter ***
+40630	423	:	GS_Single_SunSpec_DID              	64117  
+40631	424	:	GS_Single_SunSpec_Length           	39  
+40632	425	:	GS_Single_Port_Number              	1  
+40633	426	:	GS_Single_DC_Voltage_SF            	-1  
+40634	427	:	GS_Single_AC_Current_SF            	0  
+40635	428	:	GS_Single_AC_Voltage_SF            	0  
+40636	429	:	GS_Single_Frequency_SF             	-1  
+40637	430	:	GS_Single_Inverter_Output_Current  	0  
+40638	431	:	GS_Single_Inverter_Charge_Current  	0  
+40639	432	:	GS_Single_Inverter_Buy_Current     	0  
+40640	433	:	GS_Single_Inverter_Sell_Current    	0  
+40641	434	:	GS_Single_Grid_Input_AC_Voltage    	0 V
+40642	435	:	GS_Single_Gen_Input_AC_Voltage     	0 V
+40643	436	:	GS_Single_AC_Output_Voltage        	0 V
+value is 000040644	437	:	GS_Single_Inverter_Operating_Mode  	Off
+40645	438	:	GS_Single_Error_Flags              	0x0000 b
+40646	439	:	GS_Single_Warning_Flags            	0x0000 b
+40647	440	:	GS_Single_Battery_Voltage          	48.4 V
+40648	441	:	GS_Single_Temp_Comp_Target_Voltage 	48.4 V
+value is 000040649	442	:	GS_Single_AUX_Output_State         	Disabled
+value is ff0040650	443	:	GS_Single_AUX_Relay_Output_State   	Not Implemented
+40651	444	:	GS_Single_L_Module_Transformer_Temp	21 deg C
+40652	445	:	GS_Single_L_Module_Capacitor_Temp  	21 deg C
+40653	446	:	GS_Single_L_Module_FET_Temp        	21 deg C
+40654	447	:	GS_Single_R_Module_Transformer_Temp	Not implemented
+40655	448	:	GS_Single_R_Module_Capacitor_Temp  	Not implemented
+40656	449	:	GS_Single_R_Module_FET_Temp        	Not implemented
+40657	450	:	GS_Single_Battery_Temperature      	Not implemented
+value is 000040658	451	:	GS_Single_AC_Input_Selection       	Generator
+40659	452	:	GS_Single_AC_Input_Frequency       	0.0 cycles
+40660	453	:	GS_Single_AC_Input_Voltage         	0 V
+value is 000040661	454	:	GS_Single_AC_Input_State           	Use
+40662	455	:	GS_Single_Minimum_AC_Input_Voltage 	0 V
+40663	456	:	GS_Single_Maximum_AC_Input_Voltage 	0 V
+40664	457	:	GS_Single_Sell_Status              	0x000A b
+40665	458	:	GS_Single_kWh_SF                   	-1  
+40666	459	:	GS_Single_AC1_Buy_kWh              	0.0 kWh
+40667	460	:	GS_Single_AC2_Buy_kWh              	0.0 kWh
+40668	461	:	GS_Single_AC1_Sell_kWh             	0.0 kWh
+40669	462	:	GS_Single_AC2_Sell_kWh             	0.0 kWh
+40670	463	:	GS_Single_Output_kWh               	0.0 kWh
+40671	464	:	GS_Single_Charger_kWh              	6411.6 kWh
+40672	465	:	GS_Single_Output_kW                	8.4 kW
+40673	466	:	GS_Single_Buy_kW                   	0.1 kW
+40674	467	:	GS_Single_Sell_kW                  	Not implemented
+40675	468	:	GS_Single_Charge_kW                	Not implemented
+40676	469	:	GS_Single_Load_kW                  	0.0 kW
+40677	470	:	GS_Single_AC_Couple_kW             	Not implemented
+
+*** OutBack Radian Inverter Configuration ***
+40671	349	:	GSconfig_SunSpec_DID                     	64116  
+40672	350	:	GSconfig_SunSpec_Length                  	84  
+40673	351	:	GSconfig_Port_Number                     	1  
+40674	352	:	GSconfig_DC_Voltage_SF                   	-1  
+40675	353	:	GSconfig_AC_Current_SF                   	-1  
+40676	354	:	GSconfig_AC_Voltage_SF                   	0  
+40677	355	:	GSconfig_Time_SF                         	-1  
+40678	356	:	GSconfig_Major_firmware_number           	1  
+40679	357	:	GSconfig_Mid_firmware_number             	6  
+40680	358	:	GSconfig_Minor_firmware_number           	11  
+40681	359	:	GSconfig_Absorb_Volts                    	57.6 V
+40682	360	:	GSconfig_Absorb_Time_Hours               	1.0 hours
+40683	361	:	GSconfig_Float_Volts                     	54.4 V
+40684	362	:	GSconfig_Float_Time_Hours                	1.0 hours
+40685	363	:	GSconfig_ReFloat_Volts                   	50.0 V
+40686	364	:	GSconfig_EQ_Volts                        	44.0 V
+40687	365	:	GSconfig_EQ_Time_Hours                   	3.0 hours
+40688	366	:	GSconfig_Search_Sensitivity              	30  
+40689	367	:	GSconfig_Search_Pulse_Length             	8 cycles
+40690	368	:	GSconfig_Search_Pulse_Spacing            	60 cycles
+value is 000040691	369	:	GSconfig_AC_Input_Select_Priority        	Generator
+40692	370	:	GSconfig_Grid_AC_Input_Current_Limit     	60.0  
+40693	371	:	GSconfig_Gen_AC_Input_Current_Limit      	43.0  
+40694	372	:	GSconfig_Charger_AC_Input_Current_Limit  	16.0  
+value is 000040695	373	:	GSconfig_Charger_Operating_Mode          	Bulk and Float Charging Enabled
+value is 000040696	374	:	GSconfig_AC_Coupled                      	Disabled
+value is 000040697	375	:	GSconfig_Grid_Input_Mode                 	Grid Tied
+40698	376	:	GSconfig_Grid_Lower_Input_Voltage_Limit  	108 V
+40699	377	:	GSconfig_Grid_Upper_Input_Voltage_Limit  	132 V
+40700	378	:	GSconfig_Grid_Transfer_Delay             	1000  
+40701	379	:	GSconfig_Grid_Connect_Delay              	0.2 mins
+value is 000040702	380	:	GSconfig_Gen_Input_Mode                  	Generator
+40703	381	:	GSconfig_Gen_Lower_Input_Voltage_Limit   	108 V
+40704	382	:	GSconfig_Gen_Upper_Input_Voltage_Limit   	140 V
+40705	383	:	GSconfig_Gen_Transfer_Delay              	1000  
+40706	384	:	GSconfig_Gen_Connect_Delay               	0.2 mins
+40707	385	:	GSconfig_AC_Output_Voltage               	120 V
+40708	386	:	GSconfig_Low_Battery_Cut_Out_Voltage     	47.6 V
+40709	387	:	GSconfig_Low_Battery_Cut_In_Voltage      	48.8 V
+value is 000040710	388	:	GSconfig_AUX_Mode                        	Vent Fan
+value is 000040711	389	:	GSconfig_AUX_Control                     	Off
+40712	390	:	GSconfig_AUX_ON_Battery_Voltage          	56.0 V
+40713	391	:	GSconfig_AUX_ON_Delay_Time               	0.5 mins
+40714	392	:	GSconfig_AUX_OFF_Battery_Voltage         	44.0 V
+40715	393	:	GSconfig_AUX_OFF_Delay_Time              	0.5 mins
+value is ff0040716	394	:	GSconfig_AUX_Relay_Mode                  	Not Implemented
+value is ff0040717	395	:	GSconfig_AUX_Relay_Control               	Not Implemented
+40718	396	:	GSconfig_AUX_Relay_ON_Battery_Voltage    	Not implemented
+40719	397	:	GSconfig_AUX_Relay_ON_Delay_Time         	Not implemented
+40720	398	:	GSconfig_AUX_Relay_OFF_Battery_Voltage   	Not implemented
+40721	399	:	GSconfig_AUX_Relay_OFF_Delay_Time        	Not implemented
+value is 000040722	400	:	GSconfig_Stacking_Mode                   	Master
+40723	401	:	GSconfig_Master_Power_Save_Level         	0  
+40724	402	:	GSconfig_Slave_Power_Save_Level          	1  
+40725	403	:	GSconfig_Sell_Volts                      	44.0 V
+value is ff0040726	404	:	GSconfig_Grid_Tie_Window                 	Not Implemented
+value is 000040727	405	:	GSconfig_Grid_Tie_Enable                 	Enabled
+40728	406	:	GSconfig_Grid_AC_Input_Voltage_Cal_Factor	-2 V
+40729	407	:	GSconfig_Gen_AC_Input_Voltage_Cal_Factor 	Not implemented
+40730	408	:	GSconfig_AC_Output_Voltage_Cal_Factor    	-2 V
+40731	409	:	GSconfig_Battery_Voltage_Cal_Factor      	0.0 V
+40732	410	:	GSconfig_ReBulk_Volts                    	54.4 V
+40733	411	:	GSconfig_Mini_Grid_LBX_Volts             	48.0 V
+40734	412	:	GSconfig_Mini_Grid_LBX_Delay             	1.0 hours
+40735	413	:	GSconfig_Grid_Zero_DoD_Volts             	50.0 V
+40736	414	:	GSconfig_Grid_Zero_DoD_Max_Offset_AC_Amps	12.0  
+value is 000040737	415	:	GSconfig_Serial_Number                   	VFXR1519F1619267
+value is 000040746	416	:	GSconfig_Model_Number                    	VFXR3648A
+value is ff0040755	417	:	GSconfig_Module_Control                  	Not Implemented
+value is 000040756	418	:	GSconfig_Model_Select                    	Vented
+40757	419	:	GSconfig_Low_Battery_Cut_Out_Delay       	6411.1 secs
+40758	420	:	GSconfig_High_Battery_Cut_Out_Voltage    	2.6 V
+40759	421	:	GSconfig_High_Battery_Cut_In_Voltage     	0.2 V
+40760	422	:	GSconfig_High_Battery_Cut_Out_Delay      	Not implemented
+
+*** Basic Charge Controller ***
+40757	202	:	CC_SunSpec_DID               	64111  
+40758	203	:	CC_SunSpec_Length            	26  
+40759	204	:	CC_port_number               	2  
+40760	205	:	CC_Voltage_SF                	-1  
+40761	206	:	CC_Current_SF                	-1  
+40762	207	:	CC_Power_SF                  	0  
+40763	208	:	CC_AH_SF                     	0  
+40764	209	:	CC_KWH_SF                    	-1  
+40765	210	:	CC_Batt_Voltage              	48.8 V
+40766	211	:	CC_Array_Voltage             	36.6 V
+40767	212	:	CC_Batt_Current              	0.0 A
+40768	213	:	CC_Array_Current             	0 A
+value is 000040769	214	:	CC_Charger_State             	Silent
+40770	215	:	CC_Watts                     	0 W
+40771	216	:	CC_Todays_Min_Battery_Volts  	48.7 V
+40772	217	:	CC_Todays_Max_Battery_Volts  	48.7 V
+40773	218	:	CC_VOC                       	1.0 V
+40774	219	:	CC_Todays_Peak_VOC           	1 V
+40775	220	:	CC_Todays_kWH                	0.0 kWh
+40776	221	:	CC_Todays_AH                 	0 Ah
+40777	222	:	CC_Lifetime_kWH_Hours        	0 kWh
+40778	223	:	CC_Lifetime_kAmp_Hours       	0.0 kAh
+40779	224	:	CC_Lifetime_Max_Watts        	512 W
+40780	225	:	CC_Lifetime_Max_Battery_Volts	57.6 V
+40781	226	:	CC_Lifetime_Max_VOC          	91.6 V
+40782	227	:	CC_Temp_SF                   	0  
+40783	228	:	CC_Temp_Output_FETs          	Not implemented
+40784	229	:	CC_Temp_Enclosure            	Not implemented
+
+*** OutBack FM Charge Controller ***
+40785	230	:	CCconfig_SunSpec_DID                     	64112  
+40786	231	:	CCconfig_SunSpec_Length                  	88  
+40787	232	:	CCconfig_port_number                     	2  
+40788	233	:	CCconfig_Voltage_SF                      	-1  
+40789	234	:	CCconfig_Current_SF                      	-1  
+40790	235	:	CCconfig_Hours_SF                        	-1  
+40791	236	:	CCconfig_Power_SF                        	0  
+40792	237	:	CCconfig_AH_SF                           	0  
+40793	238	:	CCconfig_KWH_SF                          	-1  
+40794	239	:	CCconfig_Faults                          	0x0000 b
+40795	240	:	CCconfig_Absorb_Volts                    	57.6 V
+40796	241	:	CCconfig_Absorb_Time_Hours               	1.0 hours
+40797	242	:	CCconfig_Absorb_End_Amps                 	0.0 A
+40798	243	:	CCconfig_Rebulk_Volts                    	48.0 V
+40799	244	:	CCconfig_Float_Volts                     	54.4 V
+40800	245	:	CCconfig_Bulk_Current                    	80.0 A
+40801	246	:	CCconfig_EQ_Volts                        	57.6 V
+40802	247	:	CCconfig_EQ_Time_Hours                   	1 hours
+40803	248	:	CCconfig_Auto_EQ_Days                    	0 days
+value is 000040804	249	:	CCconfig_MPPT_Mode                       	U-Pick
+value is 000040805	250	:	CCconfig_Sweep_Width                     	Half
+value is 000040806	251	:	CCconfig_Sweep_Max_Percentage            	90 %
+40807	252	:	CCconfig_U_Pick_PWM_Duty_Cycle           	77.0 %
+value is 000040808	253	:	CCconfig_Grid_Tie_Mode                   	Disabled
+value is 000040809	254	:	CCconfig_Temp_Comp_Mode                  	Wide
+40810	255	:	CCconfig_Temp_Comp_Lower_Limit_Volts     	52.8 V
+40811	256	:	CCconfig_Temp_Comp_Upper_Limit_Volts     	56.4 V
+40812	257	:	CCconfig_Temp_Comp_Slope                 	Not implemented
+value is 000040813	258	:	CCconfig_Auto_Restart_Mode               	Off
+40814	259	:	CCconfig_Wakeup_VOC                      	6.5 V
+40815	260	:	CCconfig_Snooze_Mode_Amps                	0.2 A
+40816	261	:	CCconfig_Wakeup_Interval                 	5 mins
+value is 000040817	262	:	CCconfig_AUX_Mode                        	Remote
+value is 000040818	263	:	CCconfig_AUX_Control                     	On
+value is 000040819	264	:	CCconfig_AUX_State                       	0
+value is 000040820	265	:	CCconfig_AUX_Polarity                    	High
+40821	266	:	CCconfig_AUX_Low_Batt_Disconnect         	54.4 V
+40822	267	:	CCconfig_AUX_Low_Batt_Reconnect          	57.6 V
+40823	268	:	CCconfig_AUX_Low_Batt_Disconnect_Delay   	1 secs
+40824	269	:	CCconfig_AUX_Vent_Fan_Volts              	57.6 V
+40825	270	:	CCconfig_AUX_PV_Limit_Volts              	140.0 V
+40826	271	:	CCconfig_AUX_PV_Limit_Hold_Time          	0.0 secs
+40827	272	:	CCconfig_AUX_Night_Light_Thres_Volts     	10.0 V
+40828	273	:	CCconfig_Night_Light_ON_Hours            	0.4 hours
+40829	274	:	CCconfig_Night_Light_ON_Hyst_Time        	1 mins
+40830	275	:	CCconfig_Night_Light_OFF_Hyst_Time       	1 mins
+40831	276	:	CCconfig_AUX_Error_Battery_Volts         	44.0 V
+40832	277	:	CCconfig_AUX_Divert_Hold_Time            	0.1 secs
+40833	278	:	CCconfig_AUX_Divert_Delay_Time           	0 secs
+40834	279	:	CCconfig_AUX_Divert_Relative_Volts       	0.0 V
+40835	280	:	CCconfig_AUX_Divert_Hyst_Volts           	0.2 V
+40836	281	:	CCconfig_Major_Firmware_Number           	3  
+40837	282	:	CCconfig_Mid_Firmware_Number             	3  
+40838	283	:	CCconfig_Minor_Firmware_Number           	0  
+40839	284	:	CCconfig_Set_Log_Day_Offset              	0 days
+40840	285	:	CCconfig_Get_Current_Log_Day_Offset      	0 days
+40841	286	:	CCconfig_Log_Daily_AH                    	0 Ah
+40842	287	:	CCconfig_Log_Daily_kWH                   	0.0 kWh
+40843	288	:	CCconfig_Log_Daily_Max_Output_Amps       	0.0 A
+40844	289	:	CCconfig_Log_Daily_Max_Output_Watts      	0 W
+40845	290	:	CCconfig_Log_Daily_Absorb_Time           	0 mins
+40846	291	:	CCconfig_Log_Daily_Float_Time            	0 mins
+40847	292	:	CCconfig_Log_Daily_Min_Batt_Volts        	48.7 V
+40848	293	:	CCconfig_Log_Daily_Max_Batt_Volts        	48.7 V
+40849	294	:	CCconfig_Log_Daily_Max_Input_Volts       	1 V
+40850	295	:	CCconfig_Clear_Log_Read                  	Not implemented
+40851	296	:	CCconfig_Clear_Log_Write_Complement      	0  
+40852	297	:	CCconfig_Stats_Maximum_Reset_Read        	Not implemented
+40853	298	:	CCconfig_Stats_Maximum_Write_Complement  	0  
+40854	299	:	CCconfig_Stats_Totals_Reset_Read         	Not implemented
+40855	300	:	CCconfig_Stats_Totals_Write_Complement   	0  
+40856	301	:	CCconfig_Battery_Voltage_Calibrate_Offset	0.0 V
+value is 000040857	302	:	CCconfig_Serial_Number                   	
+value is 2d0040866	303	:	CCconfig_Model_Number                    	FM80-150VDC
+
+*** OutBack FLEXnet-DC Battery Monitor ***
+40875	665	:	FN_SunSpec_DID                                	64118  
+40876	666	:	FN_SunSpec_Length                             	76  
+40877	667	:	FN_Port_Number                                	3  
+40878	668	:	FN_DC_Voltage_SF                              	-1  
+40879	669	:	FN_DC_Current_SF                              	-1  
+40880	670	:	FN_Time_SF                                    	-1  
+40881	671	:	FN_kWh_SF                                     	-2  
+40882	672	:	FN_kW_SF                                      	-2  
+40883	673	:	FN_Shunt_A_Current                            	-0.3 A
+40884	674	:	FN_Shunt_B_Current                            	0.1 A
+40885	675	:	FN_Shunt_C_Current                            	0.0 A
+40886	676	:	FN_Battery_Voltage                            	48.7 V
+40887	677	:	FN_Battery_Current                            	-0.2 A
+40888	678	:	FN_Battery_Temperature                        	Not implemented
+40889	679	:	FN_Status_Flags                               	0x0000 b
+40890	680	:	FN_Shunt_A_Accumulated_AH                     	0 Ah
+40891	681	:	FN_Shunt_A_Accumulated_kWh                    	0.00 kWh
+40892	682	:	FN_Shunt_B_Accumulated_AH                     	0 Ah
+40893	683	:	FN_Shunt_B_Accumulated_kWh                    	0.00 kWh
+40894	684	:	FN_Shunt_C_Accumulated_AH                     	0 Ah
+40895	685	:	FN_Shunt_C_Accumulated_kWh                    	0.00 kWh
+40896	686	:	FN_Input_Current                              	0.1 A
+40897	687	:	FN_Output_Current                             	0.3 A
+40898	688	:	FN_Input_kW                                   	0.00 kW
+40899	689	:	FN_Output_kW                                  	0.00 kW
+40900	690	:	FN_Net_kW                                     	0.00 kW
+40901	691	:	FN_Days_Since_Charge_Parameters_Met           	2.9 days
+40902	692	:	FN_State_Of_Charge                            	100 %
+40903	693	:	FN_Todays_Minimum_SOC                         	100 %
+40904	694	:	FN_Todays_Maximum_SOC                         	100 %
+40905	695	:	FN_Todays_NET_Input_AH                        	0 Ah
+40906	696	:	FN_Todays_NET_Input_kWh                       	0.00 kWh
+40907	697	:	FN_Todays_NET_Output_AH                       	0 Ah
+40908	698	:	FN_Todays_NET_Output_kWh                      	0.00 kWh
+40909	699	:	FN_Todays_NET_Battery_AH                      	0 Ah
+40910	700	:	FN_Todays_NET_Battery_kWh                     	0.00 kWh
+40911	701	:	FN_Charge_Factor_Corrected_NET_Battery_AH     	0 Ah
+40912	702	:	FN_Charge_Factor_Corrected_NET_Battery_kWh    	0.00 kWh
+40913	703	:	FN_Todays_Minimum_Battery_Voltage             	0.0 V
+40914	704	:	FN_Todays_Minimum_Battery_Time                	Fri, 26 May 2017 22:33:50
+40916	705	:	FN_Todays_Maximum_Battery_Voltage             	48.8 V
+40917	706	:	FN_Todays_Maximum_Battery_Time                	Fri, 26 May 2017 22:33:50
+40919	707	:	FN_Cycle_Charge_Factor                        	100 %
+40920	708	:	FN_Cycle_kWh_Charge_Efficiency                	100 %
+40921	709	:	FN_Total_Days_At_100_Percent                  	2.3 days
+40922	710	:	FN_Lifetime_kAH_Removed                       	0 Ah
+40923	711	:	FN_Shunt_A_Historical_Returned_To_Battery_AH  	0 Ah
+40924	712	:	FN_Shunt_A_Historical_Returned_To_Battery_kWh 	0.00 kWh
+40925	713	:	FN_Shunt_A_Historical_Removed_From_Battery_AH 	0 Ah
+40926	714	:	FN_Shunt_A_Historical_Removed_From_Battery_kWh	0.00 kWh
+40927	715	:	FN_Shunt_A_Maximum_Charge_Rate                	0.3 A
+40928	716	:	FN_Shunt_A_Maximum_Charge_Rate_kW             	0.00 kW
+40929	717	:	FN_Shunt_A_Maximum_Discharge_Rate             	-1.3 A
+40930	718	:	FN_Shunt_A_Maximum_Discharge_Rate_kW          	-0.03 kW
+40931	719	:	FN_Shunt_B_Historical_Returned_To_Battery_AH  	0 Ah
+40932	720	:	FN_Shunt_B_Historical_Returned_To_Battery_kWh 	0.00 kWh
+40933	721	:	FN_Shunt_B_Historical_Removed_From_Battery_AH 	0 Ah
+40934	722	:	FN_Shunt_B_Historical_Removed_From_Battery_kWh	0.00 kWh
+40935	723	:	FN_Shunt_B_Maximum_Charge_Rate                	0.5 A
+40936	724	:	FN_Shunt_B_Maximum_Charge_Rate_kW             	0.01 kW
+40937	725	:	FN_Shunt_B_Maximum_Discharge_Rate             	-0.3 A
+40938	726	:	FN_Shunt_B_Maximum_Discharge_Rate_kW          	0.00 kW
+40939	727	:	FN_Shunt_C_Historical_Returned_To_Battery_AH  	0 Ah
+40940	728	:	FN_Shunt_C_Historical_Returned_To_Battery_kWh 	0.00 kWh
+40941	729	:	FN_Shunt_C_Historical_Removed_From_Battery_AH 	0 Ah
+40942	730	:	FN_Shunt_C_Historical_Removed_From_Battery_kWh	0.00 kWh
+40943	731	:	FN_Shunt_C_Maximum_Charge_Rate                	0.0 A
+40944	732	:	FN_Shunt_C_Maximum_Charge_Rate_kW             	0.00 kW
+40945	733	:	FN_Shunt_C_Maximum_Discharge_Rate             	0.0 A
+40946	734	:	FN_Shunt_C_Maximum_Discharge_Rate_kW          	0.00 kW
+40947	735	:	FN_Shunt_A_Reset_Maximum_Data                 	7403  
+40948	736	:	FN_Shunt_A_Reset_Maximum_Data_Write_Complement	0  
+40949	737	:	FN_Shunt_B_Reset_Maximum_Data                 	46165  
+40950	738	:	FN_Shunt_B_Reset_Maximum_Data_Write_Complement	0  
+40951	739	:	FN_Shunt_C_Reset_Maximum_Data                 	19159  
+40952	740	:	FN_Shunt_C_Reset_Maximum_Data_Write_Complement	0  
+
+*** OutBack FLEXnet-DC Battery Monitor Configuration ***
+40953	627	:	FNconfig_SunSpec_DID                    	64119  
+40954	628	:	FNconfig_SunSpec_Length                 	52  
+40955	629	:	FNconfig_Port_Number                    	3  
+40956	630	:	FNconfig_DC_Voltage_SF                  	-1  
+40957	631	:	FNconfig_DC_Current_SF                  	-1  
+40958	632	:	FNconfig_kWh_SF                         	-2  
+40959	633	:	FNconfig_Major_Firmware_Number          	1  
+40960	634	:	FNconfig_Mid_Firmware_Number            	1  
+40961	635	:	FNconfig_Minor_Firmware_Number          	71  
+40962	636	:	FNconfig_Battery_Capacity               	400 Ah
+40963	637	:	FNconfig_Charged_Volts                  	55.2 V
+40964	638	:	FNconfig_Charged_Time                   	3 mins
+40965	639	:	FNconfig_Battery_Charged_Amps           	2.0 A
+40966	640	:	FNconfig_Charge_Factor                  	94 %
+value is 000040967	641	:	FNconfig_Shunt_A_Enabled                	Enabled
+value is 000040968	642	:	FNconfig_Shunt_B_Enabled                	Enabled
+value is 000040969	643	:	FNconfig_Shunt_C_Enabled                	Disabled
+value is 000040970	644	:	FNconfig_Relay_Control                  	Off
+value is 000040971	645	:	FNconfig_Relay_Invert_Logic             	Enabled
+40972	646	:	FNconfig_Relay_High_Voltage             	14.0 V
+40973	647	:	FNconfig_Relay_Low_Voltage              	12.0 V
+40974	648	:	FNconfig_Relay_SOC_High                 	0 %
+40975	649	:	FNconfig_Relay_SOC_Low                  	0 %
+40976	650	:	FNconfig_Relay_High_Enable_Delay        	1 mins
+40977	651	:	FNconfig_Relay_Low_Enable_Delay         	1 mins
+40978	652	:	FNconfig_Set_Data_Log_Day_Offset        	0 days
+40979	653	:	FNconfig_Get_Current_Data_Log_Day_Offset	0 days
+40980	654	:	FNconfig_Datalog_Minimum_SOC            	0 %
+40981	655	:	FNconfig_Datalog_Input_AH               	0 Ah
+40982	656	:	FNconfig_Datalog_Input_kWh              	0.00 kWh
+40983	657	:	FNconfig_Datalog_Output_AH              	0 Ah
+40984	658	:	FNconfig_Datalog_Output_kWh             	0.00 kWh
+40985	659	:	FNconfig_Datalog_NET_AH                 	0 Ah
+40986	660	:	FNconfig_Datalog_NET_kWh                	0.00 kWh
+40987	661	:	FNconfig_Clear_Data_Log_Read            	54561  
+40988	662	:	FNconfig_Clear_Data_Log_Write_Complement	0  
+value is 000040989	663	:	FNconfig_Serial_Number                  	
+value is 000040998	664	:	FNconfig_Model_Number                   	FLEXnet DC
+
+*** SunSpec End Block ***
+41007	811	:	END_SunSpec_DID   	65535  
+41008	812	:	END_SunSpec_Length	0  
+>> 
+
