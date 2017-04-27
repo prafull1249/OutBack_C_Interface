@@ -2,8 +2,6 @@
 Shell
 *.tar
 *.zip
-outback
-program
 tags
 .idea
 .pyc
