@@ -8,7 +8,7 @@ reg_names = ["I_AC_Power", "I_AC_Current", "I_AC_VoltageAN","CC_Charger_State", 
 #Outback_Minute      #Clock Minute (0 - 59)
 #OutBack_Second      #Clock Second (0 - 59)
 
-inv.read_multiple(reg_names)
+#inv.read_multiple(reg_names)
 
 
 def write_reg(field, block, value):
@@ -18,6 +18,17 @@ def write_reg(field, block, value):
 	inv.write_single(field, block, value)
 	print "*" * 80
 	inv.read_single(field, block)
+
+write_reg = ["OutBack_Grid_Use_Interval_1_Mode","CCconfig_MPPT_Mode","GSconfig_Grid_Tie_Enable","GSconfig_AC_Output_Voltage"]
+
+values = [1, 0, 0, 117]
+flip_values = [0,1,1,120]
+
+inv.read_multiple(write_reg)
+inv.write_multiple(write_reg, values)
+inv.read_multiple(write_reg)
+inv.write_multiple(write_reg, flip_values)
+inv.read_multiple(write_reg)
 
 
 #write_reg(366, 6 , 30)
